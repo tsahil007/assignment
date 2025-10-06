@@ -4,7 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 df = pd.read_excel("Tagged_Dataset_Hierarchical (1).xlsx")
-df['Order Date'] = pd.to_datetime(df['Order Date'], origin='1899-12-30', unit='D')
+df['Order Date'] = pd.to_datetime(df['Order Date'])
+
 
 st.title("Complaint Analysis Dashboard")
 
