@@ -11,11 +11,9 @@ st.title("Complaint Analysis Dashboard")
 
 # Sidebar filters
 category = st.sidebar.selectbox("Product Category", df['Product Category'].unique())
-root_filter = st.sidebar.multiselect("Root Cause", df['Root Cause'].dropna().unique())
+
 
 filtered_df = df[df['Product Category'] == category]
-if root_filter:
-    filtered_df = filtered_df[filtered_df['Root Cause'].isin(root_filter)]
 
 # Root Cause Chart
 st.subheader("Top Root Causes")
